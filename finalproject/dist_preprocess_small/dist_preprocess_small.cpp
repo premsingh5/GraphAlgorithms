@@ -90,7 +90,6 @@ public:
         // Priority queue will store pairs of (importance, node) with the least important node in the head
         std::priority_queue<std::pair<int, int>, std::vector<std::pair<int,int>>, std::greater<std::pair<int, int>>> queue;
 
-        // Implement the rest of the algorithm yourself
     }
 
     // Returns distance from s to t in the graph
@@ -99,7 +98,7 @@ public:
         update(w, 0, false);
         s = u; 
         t = w;
-        // Implement the rest of the algorithm yourself
+        
 
         return -1;
     }
@@ -155,7 +154,6 @@ private:
     // Adds all the shortcuts for the case when node v is contracted, and returns the importance of node v
     // in this case
     int do_shortcut(int v, std::vector<Shortcut>& shortcuts, int& mylevel) {
-        // Implement this method yourself
 
         // Add neighbors and shortcut cover heuristics
         return (shortcuts.size() - outgoing_edges[v].size() - incoming_edges[v].size()) + mylevel;
